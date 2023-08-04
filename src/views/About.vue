@@ -1,36 +1,28 @@
 <template>
     <div class="target" v-motion-slide-visible-once-left>
-        <section class="about bg-zinc-100 dark:bg-zinc-800">
-            <div class="hero-main flex flex-col mr-40 pb-80">
-                <div class="flex flex-col md:flex-row justify-end">
-                    <!-- <div class="absolute z-0 w-[90%] h-[35%] top-0 gradient-1"></div>
-                        <div class="absolute z-0 w-[80%] h-[80%] rounded-full bottom-40 gradient-2"></div>
-                        <div class="absolute z-0 w-[80%] h-[50%] right-20 bottom-20 gradient-3"></div> -->
-                    <div class="gradient-one"></div>
-                    <h1 class="w-1/3 font-bold dark:text-white text-6xl text-center sm:text-right">
-                        About me</h1>
-                    <p class="flex flex-col md:flex-row justify-end">test</p>
-                </div>
-                <div class="scroll-parent flex flex-col md:flex-row">
-                    <div class="scroll-element primary justify-end">
-                        <img class="w-10" src="/languages/HTML.svg" />
-                        <img class="w-10" src="/languages/CSS.svg" />
-                        <img class="w-10" src="/languages/JavaScript.svg" />
-                        <img class="w-10" src="/languages/Vue.svg" />
-                        <img class="w-10" src="/languages/tailwind.svg" />
-                        <img class="w-10" src="/languages/git.svg" />
-                        <img class="w-10" src="/languages/mysql.svg" />
-                    </div>
-                    <div class="scroll-element secondary">
-                        <img class="w-10" src="/languages/HTML.svg" />
-                        <img class="w-10" src="/languages/CSS.svg" />
-                        <img class="w-10" src="/languages/JavaScript.svg" />
-                        <img class="w-10" src="/languages/Vue.svg" />
-                        <img class="w-10" src="/languages/tailwind.svg" />
-                        <img class="w-10" src="/languages/git.svg" />
-                        <img class="w-10" src="/languages/mysql.svg" />
-                    </div>
-                </div>
+        <section class="relative overflow-hidden text-black dark:text-white bg-zinc-100 dark:bg-zinc-800">
+            <div class="relative z-10 pb-60 max-w-2xl w-full sm:ml-40">
+                <main class="mt-10 mx-auto px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <h2 class="my-6 text-6xl font-bold text-center sm:text-left text-transparent bg-clip-text bg-gradient-to-l from-indigo-400 to-rose-700">
+                        About me
+                    </h2>
+                    <p class="text-lg dark:text-white text-center sm:text-left">A software development student
+                        on his journey to become a Frontend Developer. Currently building <span
+                            class="text-transparent bg-clip-text bg-gradient-to-l from-yellow-300 to-pink-500">accessible</span>
+                        and <span class="text-transparent bg-clip-text bg-gradient-to-l from-yellow-300 to-pink-500">user-friendly</span> apps, using modern frameworks such as
+                        <a target="_blank" class="hover:font-bold underline decoration-sky-500 decoration-2"
+                            href="https://tailwindcss.com/">TailwindCSS</a>,
+                        <a target="_blank" class="hover:font-bold underline decoration-green-600 decoration-2"
+                            href="https://vuejs.org/">Vue</a>/<a target="_blank"
+                            class="hover:font-bold underline decoration-green-500 decoration-2"
+                            href="https://nuxt.com">Nuxt</a>
+                        and in the future I will be learning
+                        <a target="_blank" class="hover:font-bold underline decoration-sky-400 decoration-2"
+                            href="https://react.dev/">React</a>/<a target="_blank"
+                            class="hover:font-bold underline decoration-stone-950 decoration-2"
+                            href="https://nextjs.org/">Next.js</a>.
+                    </p>
+                </main>
             </div>
         </section>
     </div>
@@ -41,66 +33,6 @@
 </script>
 
 <style scoped>
-.scroll-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 2rem;
-}
-
-.scroll-parent {
-    position: absolute;
-    width: 28.3vw;
-    height: 20rem;
-    padding: 2rem 0;
-    overflow-x: hidden;
-}
-
-.scroll-element {
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    right: 0%;
-    top: 0%;
-    animation: primary 12s linear infinite;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.scroll-element img {
-    width: 6%;
-}
-
-.primary {
-    animation: primary 12s linear infinite;
-}
-
-.secondary {
-    animation: secondary 12s linear infinite;
-}
-
-@keyframes primary {
-    from {
-        right: 0%;
-    }
-
-    to {
-        right: -100%;
-    }
-}
-
-@keyframes secondary {
-    from {
-        right: 100%;
-    }
-
-    to {
-        right: 0%;
-    }
-}
-
 .gradient-one {
     position: absolute;
     width: 40vw;

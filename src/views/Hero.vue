@@ -12,13 +12,13 @@
                         </h1>
                         <h1 class="text-6xl font-bold dark:text-slate-100 text-center md:text-left">Jarvin
                             Siegers</h1>
-                        <h1 class="text-3xl font text-center md:text-left dark:text-white opacity-60">Software
+                        <h1 class="text-3xl text-center md:text-left dark:text-white opacity-60">Software
                             Developer
                         </h1>
                         <div class="flex flex-row justify-center md:justify-start overflow-hidden items-center mt-6">
                             <li
-                                class="btn-send-light dark:btn-send-dark uppercase cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">
-                                <RouterLink class="hover:font-bold" to="#home" v-scroll-to="'#contact'"> Get in touch
+                                class="btn-send-light dark:btn-send-dark uppercase cursor-pointer flex dark:text-white py-2 px-4 font-bold rounded-lg focus:outline-none focus:shadow-outline">
+                                <RouterLink to="#home" v-scroll-to="'#contact'"> Get in touch
                                 </RouterLink>
                             </li>
                         </div>
@@ -51,7 +51,7 @@ useMotion(targetEl, {
     .btn-send-dark {
         box-shadow: 0 0 6px 0 rgba(157, 96, 212, 2);
         border: solid 3px transparent;
-        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(60deg, #ba07e7, #eb1405);
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(60deg, #0128d4, #eb1405);
         background-origin: border-box;
         box-shadow: 2px 1000px 1px black inset;
         color: white;
