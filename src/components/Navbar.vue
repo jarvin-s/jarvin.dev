@@ -2,8 +2,8 @@
     <div class="bg-stone-50 dark:bg-zinc-900 sticky top-0 z-10">
         <nav class="nav-container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
             <div class="flex items-center justify-between">
-                <RouterLink to="#home" class="text-xl  md:text-2xl">
-                    <span class="font-bold text-transparent bg-clip-text bg-gradient-to-tl from-pink-400 to-blue-700 ">jarvin</span>
+                <RouterLink to="#home" class="font-bold text-2xl">
+                    <span class="font-bold text-transparent bg-clip-text bg-gradient-to-tl from-pink-400 to-pink-500">jarvin</span>
                     <span class="font-bold text-transparent bg-clip-text bg-gradient-to-tl from-red-400 to-red-700">.dev</span>
                 </RouterLink>
                 <div @click="showMenu = !showMenu" class="flex md:hidden">

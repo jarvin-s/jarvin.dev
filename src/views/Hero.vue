@@ -49,17 +49,16 @@ useMotion(targetEl, {
 
 @layer utilities {
     .btn-send-dark {
-        box-shadow: 0 0 6px 0 rgba(157, 96, 212, 2);
         border: solid 3px transparent;
-        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(60deg, #0128d4, #eb1405);
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(60deg, #e41a96, #db271a);
         background-origin: border-box;
-        box-shadow: 2px 1000px 1px black inset;
         color: white;
         transition: 300ms;
+        box-shadow: none;
     }
 
     .btn-send-dark:hover {
-        box-shadow: none;
+        
     }
 }
 
