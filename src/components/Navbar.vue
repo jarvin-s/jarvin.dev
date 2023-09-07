@@ -2,8 +2,9 @@
     <div class="bg-stone-50 dark:bg-zinc-900 sticky top-0 z-10">
         <nav class="nav-container px-6 py-8 mx-auto md:flex md:justify-between md:items-center">
             <div class="flex items-center justify-between">
-                <RouterLink to="#home" class="text-xl  md:text-2xl">
-                    <h3 class="text-black font-bold dark:text-white">jarvin.dev</h3>
+                <RouterLink to="#home" class="font-bold text-2xl">
+                    <span class="font-bold text-transparent bg-clip-text bg-gradient-to-tl from-pink-400 to-pink-500">jarvin</span>
+                    <span class="font-bold text-transparent bg-clip-text bg-gradient-to-tl from-red-400 to-red-700">.dev</span>
                 </RouterLink>
                 <div @click="showMenu = !showMenu" class="flex md:hidden">
                     <button type="button"
@@ -21,19 +22,19 @@
                 class="flex-col mt-8 md:flex items-center md:space-y-0 md:flex-row md:space-x-2 md:mt-0">
 
                 <li class="px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-300 dark:hover:bg-zinc-600">
-                    <RouterLink class="hover:font-bold" to="#home" v-scroll-to="'#home'"> Home </RouterLink>
+                    <RouterLink to="#home" v-scroll-to="'#home'"> Home </RouterLink>
                 </li>
 
                 <li class="px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-300 dark:hover:bg-zinc-600">
-                    <RouterLink class="hover:font-bold" to="#about" v-scroll-to="'#about'"> About </RouterLink>
+                    <RouterLink to="#about" v-scroll-to="'#about'"> About </RouterLink>
                 </li>
 
                 <li class="px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-300 dark:hover:bg-zinc-600">
-                    <RouterLink class="hover:font-bold" to="#projects" v-scroll-to="'#projects'"> Projects </RouterLink>
+                    <RouterLink to="#projects" v-scroll-to="'#projects'"> Projects </RouterLink>
                 </li>
 
                 <li class="px-3 py-2 rounded-lg text-black dark:text-white hover:bg-gray-300 dark:hover:bg-zinc-600">
-                    <RouterLink class="hover:font-bold" to="#contact" v-scroll-to="'#contact'"> Contact </RouterLink>
+                    <RouterLink to="#contact" v-scroll-to="'#contact'"> Contact </RouterLink>
                 </li>
 
                 <DarkModeToggle />

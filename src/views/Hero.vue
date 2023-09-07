@@ -5,9 +5,8 @@
                 <div class="hero-main w-1/3 m-40 h-80 flex justify-center items-center flex-col md:flex-row relative">
                     <div class="absolute z-0 w-[90%] h-[35%] top-0 gradient-1"></div>
                     <div class="absolute z-0 w-[80%] h-[80%] rounded-full bottom-40 gradient-2"></div>
-                    <div class="absolute z-0 w-[80%] h-[50%] right-20 bottom-20 gradient-3"></div>
                     <div class="hero-text absolute flex flex-col text-center md:text-left">
-                        <h1 class="text-2xl font-bold text-blue-500 dark:text-blue-500">Hi, my name
+                        <h1 class="text-2xl font-bold text-pink-700">Hi, my name
                             is
                         </h1>
                         <h1 class="text-6xl font-bold dark:text-slate-100 text-center md:text-left">Jarvin
@@ -49,17 +48,17 @@ useMotion(targetEl, {
 
 @layer utilities {
     .btn-send-dark {
-        box-shadow: 0 0 6px 0 rgba(157, 96, 212, 2);
         border: solid 3px transparent;
-        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(60deg, #0128d4, #eb1405);
+        background-image: linear-gradient(60deg, #ac096d, #b3170c);
         background-origin: border-box;
-        box-shadow: 2px 1000px 1px black inset;
         color: white;
         transition: 300ms;
+        box-shadow: none;
     }
 
     .btn-send-dark:hover {
-        box-shadow: none;
+        background-image: linear-gradient(60deg, #c70c7f, #c0362d);
+        box-shadow: (0 0 20px 10px rgba(157, 96, 212, 2))
     }
 }
 
@@ -114,18 +113,13 @@ useMotion(targetEl, {
 
 /* Gradients */
 .gradient-1 {
-    background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #046cce 100%);
+    background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #d60baa 100%);
     filter: blur(123px);
 }
 
 .gradient-2 {
     background: linear-gradient(90deg, #500b88 0%, #580970 100%);
     filter: blur(500px);
-}
-
-.gradient-3 {
-    background: rgba(149, 62, 231, 0.6);
-    filter: blur(400px);
 }
 
 .wave {
