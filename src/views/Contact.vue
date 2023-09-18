@@ -16,19 +16,19 @@
                 <div>
                     <label for="name" class="block mb-2 text-sm font-bold text-black dark:text-white">Name</label>
                     <input type="name" id="name"
-                        class="shadow-sm bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                        class="shadow-sm bg-gray-50 border border-gray-300 text-black text-sm rounded-lg block focus:-translate-y-1 duration-300 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                         placeholder="Your full name" required>
                 </div>
                 <div>
                     <label for="email" class="block mb-2 text-sm font-bold text-black dark:text-white">Email</label>
                     <input type="text" id="email"
-                        class="block p-3 w-full text-sm text-black bg-gray-50 rounded-lg border border-gray-300 shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                        class="block p-3 w-full text-sm text-black bg-gray-50 rounded-lg border focus:-translate-y-1 duration-300 border-gray-300 shadow-sm dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                         placeholder="name@example.com" required>
                 </div>
                 <div class="sm:col-span-2">
                     <label for="message" class="block mb-2 text-sm font-bold text-black dark:text-white">Message</label>
                     <textarea id="message" rows="6"
-                        class="block p-2.5 w-full text-sm text-black bg-gray-50 rounded-lg shadow-sm border border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        class="block p-2.5 w-full text-sm text-black focus:placeholder:hidden bg-gray-50 rounded-lg shadow-sm border focus:-translate-y-1 duration-300 border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                         placeholder="Your message"></textarea>
                 </div>
                 <button @click="sendMessage()"
@@ -61,6 +61,16 @@ export default {
 .box {
     position: relative;
     transform-style: preserve-3d;
+}
+
+.btn-box {
+    transition: all 800ms;
+}
+
+.btn-box:hover {
+    -webkit-box-shadow: 0px 0px 54px 0px rgba(189, 32, 189, 1);
+    -moz-box-shadow: 0px 0px 54px 0px rgba(189, 32, 189, 1);
+    box-shadow: 0px 0px 54px 0px rgba(189, 32, 189, 1);
 }
 
 .box::before {
