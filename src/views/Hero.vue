@@ -14,12 +14,13 @@
                         <h1 class="text-3xl text-center md:text-left dark:text-white opacity-60">Software
                             Developer
                         </h1>
-                        <div class="flex flex-row justify-center md:justify-start overflow-hidden items-center mt-6">
-                            <li
-                                class="btn-send-light dark:btn-send-dark uppercase cursor-pointer flex dark:text-white py-2 px-4 font-bold rounded-lg focus:outline-none focus:shadow-outline">
-                                <RouterLink to="#home" v-scroll-to="'#contact'"> Get in touch
+                        <div class="flex flex-row justify-center md:justify-start items-center mt-6">
+                            <button
+                                class="btn-send uppercase cursor-pointer flex dark:text-white py-2 px-4 font-bold rounded-lg focus:outline-none focus:shadow-outline">
+                                <RouterLink to="#home" v-scroll-to="'#contact'">
+                                    Get in touch
                                 </RouterLink>
-                            </li>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -47,33 +48,21 @@ useMotion(targetEl, {
 @tailwind utilities;
 
 @layer utilities {
-    .btn-send-dark {
+    .btn-send {
         border: solid 3px transparent;
-        background-image: linear-gradient(60deg, #ac096d, #b3170c);
+        background-image: linear-gradient(60deg, rgb(172, 9, 109), rgb(179, 23, 12));
         background-origin: border-box;
         color: white;
         transition: 300ms;
         box-shadow: none;
+        transition: all 800ms;
     }
 
-    .btn-send-dark:hover {
-        background-image: linear-gradient(60deg, #c70c7f, #c0362d);
-        box-shadow: (0 0 20px 10px rgba(157, 96, 212, 2))
+    .btn-send:hover {
+        -webkit-box-shadow: 0px 0px 54px 0px rgba(189, 32, 189, 1);
+        -moz-box-shadow: 0px 0px 54px 0px rgba(189, 32, 189, 1);
+        box-shadow: 0px 0px 54px 0px rgb(172, 9, 109), rgb(179, 23, 12) 0px 0px 32px 0px;
     }
-}
-
-.btn-send-light {
-    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 2);
-    border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(60deg, #0128d4, #eb1405);
-    background-origin: border-box;
-    box-shadow: 2px 1000px 1px black inset;
-    color: white;
-    transition: 300ms;
-}
-
-.btn-send-light:hover {
-    box-shadow: none;
 }
 
 /* .hero-img {
