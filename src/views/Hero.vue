@@ -16,7 +16,7 @@
                         </h1>
                         <div class="flex flex-row justify-center md:justify-start items-center mt-6">
                             <button
-                                class="btn-send uppercase cursor-pointer flex dark:text-white py-2 px-4 font-bold rounded-lg focus:outline-none focus:shadow-outline">
+                                class="btn-send cursor-pointer flex py-2 px-4 font-bold rounded-lg focus:outline-none focus:shadow-outline">
                                 <RouterLink to="#home" v-scroll-to="'#contact'">
                                     Get in touch
                                 </RouterLink>
