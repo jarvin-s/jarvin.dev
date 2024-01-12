@@ -12,35 +12,47 @@
                     </p>
                     <p v-if="repo.name === repo.name" class="ml-4">{{ repo.description }}</p>
                     <div class="flex flex-col md:flex-row m-4 ml-4 space-y-2 md:space-y-0 space-x-0 md:space-x-2">
-                            <a v-if="index === 0"
-                                class=" btn-send-light dark:btn-send-dark cursor-not-allowed opacity-50 flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                                type="button">
-                                Live demo
-                                <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
-                            </a>
-                            <a v-else-if="index === 1" target="_blank" :href="hcGroupLink"
-                                class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                                type="button">
-                                Live demo
-                                <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
-                            </a>
-                            <a v-else-if="index === 2" target="_blank" :href="portfolioLink"
-                                class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                                type="button">
-                                Live demo
-                                <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
-                            </a>
-                            <a v-else target="_blank" :href="sunToursLink"
-                                class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                                type="button">
-                                Live demo
-                                <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
-                            </a>
-                            <a target="_blank" :href="`${repo.html_url}`"
-                                class="btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">
-                                Code
-                                <Icon class="ml-1 " icon="mdi:github" width="24" />
-                            </a>
+                        <a v-if="index === 0"
+                            class=" btn-send-light dark:btn-send-dark cursor-not-allowed opacity-50 flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+                            type="button">
+                            Live demo
+                            <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
+                        </a>
+                        <a v-if="index === 1"
+                            class=" btn-send-light dark:btn-send-dark cursor-not-allowed opacity-50 flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+                            type="button">
+                            Live demo
+                            <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
+                        </a>
+                        <a v-else-if="index === 2" target="_blank" :href="gildeQuizLink"
+                            class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+                            type="button">
+                            Live demo
+                            <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
+                        </a>
+                        <a v-else-if="index === 3" target="_blank" :href="hcGroupLink"
+                            class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+                            type="button">
+                            Live demo
+                            <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
+                        </a>
+                        <a v-else-if="index === 4" target="_blank" :href="portfolioLink"
+                            class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+                            type="button">
+                            Live demo
+                            <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
+                        </a>
+                        <a v-else-if="index === 5" target="_blank" :href="sunToursLink"
+                            class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+                            type="button">
+                            Live demo
+                            <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
+                        </a>
+                        <a target="_blank" :href="`${repo.html_url}`"
+                            class="btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline">
+                            Code
+                            <Icon class="ml-1 " icon="mdi:github" width="24" />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -65,11 +77,12 @@ export default {
             Project_SunTours_jarvin: "School assignment in the first year",
             hcGroupLink: "https://hc-group-jarvin.netlify.app/",
             portfolioLink: "https://jarvin.dev/",
-            sunToursLink: "https://suntours-jarvin.netlify.app/"
+            sunToursLink: "https://suntours-jarvin.netlify.app/",
+            gildeQuizLink: "https://gilde-quiz.vercel.app/"
         }
     },
     async mounted() {
-        try {
+        try { //catch any errors
             let response = await fetch("https://api.github.com/users/jarvin-s/repos");
             this.repos = await response.json();
 
@@ -119,6 +132,7 @@ export default {
 .btn-send-light:hover {
     box-shadow: none;
 }
+
 .card {
     --border-size: 3px;
     --border-angle: 0turn;
