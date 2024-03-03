@@ -18,31 +18,25 @@
                             Live demo
                             <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
                         </a>
-                        <a v-if="index === 1"
-                            class=" btn-send-light dark:btn-send-dark cursor-not-allowed opacity-50 flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                            type="button">
-                            Live demo
-                            <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
-                        </a>
-                        <a v-else-if="index === 2" target="_blank" :href="gildeQuizLink"
+                        <a v-else-if="index === 1" target="_blank" :href="gildeQuizLink"
                             class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
                             type="button">
                             Live demo
                             <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
                         </a>
-                        <a v-else-if="index === 3" target="_blank" :href="hcGroupLink"
+                        <a v-else-if="index === 2" target="_blank" :href="hcGroupLink"
                             class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
                             type="button">
                             Live demo
                             <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
                         </a>
-                        <a v-else-if="index === 4" target="_blank" :href="portfolioLink"
+                        <a v-else-if="index === 3" target="_blank" :href="portfolioLink"
                             class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
                             type="button">
                             Live demo
                             <Icon class="ml-1 " icon="clarity:pop-out-line" width="24" />
                         </a>
-                        <a v-else-if="index === 5" target="_blank" :href="sunToursLink"
+                        <a v-else-if="index === 4" target="_blank" :href="sunToursLink"
                             class=" btn-send-light dark:btn-send-dark cursor-pointer flex dark:text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
                             type="button">
                             Live demo
@@ -82,7 +76,7 @@ export default {
         }
     },
     async mounted() {
-        try { //catch any errors
+        try {
             let response = await fetch("https://api.github.com/users/jarvin-s/repos");
             this.repos = await response.json();
 
